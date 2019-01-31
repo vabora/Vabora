@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}/main.css"/>
+    <title>测试页</title>
+</head>
+<body>
+  {switch $user}
+  {case "yifeng"}
+  <h1>{$user}</h1>
+  {/case}
+  {case "vabora"}
+  <h1>Vabora</h1>
+  {/case}
+  {/switch}
+  <img src="{IMG_PATH}/logo.png"/>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+      <input type="file" name="file1"/><br/>
+      <input type="file" name="file2"/><br/>
+      <input multiple type="file" name="file[]"/><br/>
+      <input type="submit"/>
+    </form>
+</body>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    axios.post('/uploads', {
+        firstName: 'Fred',
+        lastName: 'Flintstone'
+      })
+      .then(function (response) {
+        var data = response.data;
+        document.write(JSON.stringify(data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+</script> -->
+</html>
