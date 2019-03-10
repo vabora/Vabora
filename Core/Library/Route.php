@@ -69,7 +69,7 @@ class Route {
     }
     /**
      * Route::url() 采用[URL]方式的访问
-     * @param string $route_file 路由跪着文件
+     * @param string $route_file 路由规则文件
      */
     static public function url(string $route_file){
         $uri = $_SERVER['REQUEST_URI'];
